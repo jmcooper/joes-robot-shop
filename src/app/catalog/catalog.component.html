@@ -1,10 +1,10 @@
 <div class="container">
   <div class="filters">
-    <a class="button" (click)="filter = 'Heads'">Heads</a>
-    <a class="button" (click)="filter = 'Arms'">Arms</a>
-    <a class="button" (click)="filter = 'Torsos'">Torsos</a>
-    <a class="button" (click)="filter = 'Bases'">Bases</a>
-    <a class="button" (click)="filter = ''">All</a>
+    <a class="button" (click)="filter='Heads'">Heads</a>
+    <a class="button" (click)="filter='Arms'">Arms</a>
+    <a class="button" (click)="filter='Torsos'">Torsos</a>
+    <a class="button" (click)="filter='Bases'">Bases</a>
+    <a class="button" (click)="filter=''">All</a>
   </div>
 
   <ul class="products">
@@ -19,11 +19,9 @@
           </div>
         </div>
         <div class="price">
-          <div [ngClass]="{ strikethrough: product.discount > 0 }">
-            {{ product.price | currency : "USD" }}
-          </div>
+          <div *ngIf="product.discount === 0">{{ product.price | currency:'USD' }}</div>
           <div *ngIf="product.discount > 0" class="discount">
-            {{ product.price * (1 - product.discount) | currency : "USD" }}
+            {{ (product.price * (1 - product.discount)) | currency:'USD' }}
           </div>
           <button class="cta">Buy</button>
         </div>

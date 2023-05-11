@@ -194,11 +194,6 @@ export class CatalogComponent {
     console.log(`product ${product.name} added to cart`);
   }
 
-  getImageUrl(product: IProduct) {
-    if (!product) return '';
-    return '/assets/images/robot-parts/' + product.imageName;
-  }
-
   getFilteredProducts() {
     return this.filter === ''
       ? this.products

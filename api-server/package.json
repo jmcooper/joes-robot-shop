@@ -4,7 +4,7 @@
   "description": "API Server for use with the Pluralsight Angular Fundamentals Demo App",
   "main": "index.js",
   "scripts": {
-    "start-api": "node ."
+    "start": "node ."
   },
   "author": "Joe Eames & Jim Cooper",
   "license": "ISC",

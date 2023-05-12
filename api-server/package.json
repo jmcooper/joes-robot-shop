@@ -1,0 +1,15 @@
+{
+  "name": "angular-fundamentals-api-server",
+  "version": "1.0.0",
+  "description": "API Server for use with the Pluralsight Angular Fundamentals Demo App",
+  "main": "index.js",
+  "scripts": {
+    "start-api": "node ."
+  },
+  "author": "Joe Eames & Jim Cooper",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3"
+  }
+}

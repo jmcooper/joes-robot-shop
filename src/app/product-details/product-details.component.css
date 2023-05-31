@@ -3,10 +3,11 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 25px;
-  .product-details {
-    display: flex;
-    align-items: center;
-  }
+}
+
+.product .product-details {
+  display: flex;
+  align-items: center;
 }
 
 .product img {

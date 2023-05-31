@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IProduct } from './product.model';
-import { CartService } from '../cart.service';
+import { CartService } from '../cart/cart.service';
 import { ProductService } from './product.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class CatalogComponent {
   constructor(
     private cartSvc: CartService,
     private productSvc: ProductService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.productSvc.getProducts().subscribe((products) => {
@@ -31,7 +31,7 @@ export class CatalogComponent {
     return this.filter === ''
       ? this.products
       : this.products.filter(
-          (product: any) => product.category === this.filter
-        );
+        (product: any) => product.category === this.filter
+      );
   }
 }

@@ -1,18 +1,15 @@
 <div class="container">
   <div class="filters">
-    <a class="button" (click)="filter = 'Heads'">Heads</a>
-    <a class="button" (click)="filter = 'Arms'">Arms</a>
-    <a class="button" (click)="filter = 'Torsos'">Torsos</a>
-    <a class="button" (click)="filter = 'Bases'">Bases</a>
-    <a class="button" (click)="filter = ''">All</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'Heads'}" class="button">Heads</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'Arms'}" class="button">Arms</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'Torsos'}" class="button">Torsos</a>
+    <a routerLink="/catalog" [queryParams]="{filter: 'Bases'}" class="button">Bases</a>
+    <a routerLink="/catalog" class="button">All</a>
   </div>
 
   <ul class="products">
     <li class="product-item" *ngFor="let product of getFilteredProducts()">
-      <bot-product-details
-        [product]="product"
-        (buy)="addToCart(product)"
-      ></bot-product-details>
+      <bot-product-details [product]="product" (buy)="addToCart(product)"></bot-product-details>
     </li>
   </ul>
 </div>

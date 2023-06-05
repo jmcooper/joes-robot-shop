@@ -25,6 +25,11 @@
   font-size: 18px;
 }
 
+.control select {
+  padding: 15px;
+  font-size: 18px;
+}
+
 .control input {
   display: inline-block;
 }

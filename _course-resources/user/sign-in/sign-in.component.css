@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  display: flex;
+  padding: 30px 50px 50px 50px;
+  flex-direction: column;
+  margin-top: 25px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.form input {
+  margin-top: 25px;
+}
+
+.logo {
+  width: 150px;
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+.sign-in {
+  font-size: 30px;
+  align-self: center;
+  color: #555;
+}
+
+.sub-text {
+  font-size: 18px;
+  align-self: center;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.form .buttons {
+  margin-top: 10px;
+  display: inline-flex;
+  justify-content: flex-end;
+  font-size: 16px;
+}
+
+input.error {
+  border: 1px solid #d25ca1;
+}
+
+em.error {
+  padding: 2px 5px;
+  background-color: #d25ca1;
+  color: white;
+  font-style: normal;
+}
+
+.signInError {
+  margin: 25px 0;
+  color: red;
+  font-size: 18px;
+  text-align: center;
+}

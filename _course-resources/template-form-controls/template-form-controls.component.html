@@ -1,22 +1,20 @@
 <div class="container">
   <form class="form">
     <div class="header">Form Control Examples</div>
-   
+
     <div class="control">
       <input name="textInput" type="text" [(ngModel)]="textInput" />
       <div>Value: {{textInput}} Type: {{getType(textInput)}}</div>
     </div>
-   
+
     <div class="control">
       <input name="numberInput" type="number" [(ngModel)]="numericInput" />
       <div>Value: {{numericInput}} Type: {{getType(numericInput)}}</div>
     </div>
-   
+
     <div class="control">
       <select name="select" type="select" [(ngModel)]="stringInput">
-        <option 
-          *ngFor="let option of selectOptions" 
-          [ngValue]="option.value">{{option.text}}</option>
+        <option *ngFor="let option of selectOptions" [value]="option.value">{{option.text}}</option>
       </select>
       <div>Value: {{stringInput}} Type: {{getType(stringInput)}}</div>
     </div>
@@ -31,10 +29,10 @@
 
     <div class="control">
       <div>
-        <input name="radioInput" type="radio" [value]="1"  [(ngModel)]="radioInput" /> Radio One
+        <input name="radioInput" type="radio" [value]="1" [(ngModel)]="radioInput" /> Radio One
       </div>
       <div>
-        <input name="radioInput" type="radio" [value]="2"  [(ngModel)]="radioInput" /> Radio Two
+        <input name="radioInput" type="radio" [value]="2" [(ngModel)]="radioInput" /> Radio Two
       </div>
       <div>Value: {{radioInput}} Type: {{getType(radioInput)}}</div>
     </div>

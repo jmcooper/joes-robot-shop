@@ -8,7 +8,9 @@ import { IProduct } from '../catalog/product.model';
   providedIn: 'root',
 })
 export class CartService {
-  private cart: BehaviorSubject<IProduct[]> = new BehaviorSubject<IProduct[]>([]);
+  private cart: BehaviorSubject<IProduct[]> = new BehaviorSubject<IProduct[]>(
+    []
+  );
 
   constructor(private http: HttpClient) {
     this.http.get<IProduct[]>('/api/cart').subscribe({
